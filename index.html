@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | e-Bus Pass</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0f2f1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Top Title Header */
+    .header {
+      color: #00a2a6;
+      font-size: 22px;
+      font-weight: bold;
+      font-family: "Times New Roman", Times, serif;
+      background: #ffffff;
+      width: 100%;
+      text-align: center;
+      padding: 12px 0;
+      margin-bottom: 20px;
+    }
+
+    /* Pass Container Box */
+    .card {
+      background-color: #ffffff;
+      background-image: url('dtc-watermark.png');
+      background-repeat: repeat;
+      background-size: 150px 75px;
+      width: 90%;
+      max-width: 550px;
+      padding-top: 20px;
+      text-align: center;
+      border: 1px solid #cccccc;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: auto;
+    }
+
+    /* Pass Main Title */
+    .main-title {
+      color: #00a2a6;
+      font-size: 22px;
+      font-weight: bold;
+      font-family: "Times New Roman", Times, serif;
+      letter-spacing: 0.2px;
+      margin-bottom: 15px;
+      text-decoration: underline;
+      border-bottom: 1px solid #cccccc;
+      padding-bottom: 8px;
+    }
+
+    /* Profile Photo Wrapper */
+    .user-img-wrapper {
+      position: relative;
+      width: 150px;
+      height: 175px;
+      margin: 0 auto 12px auto;
+      border: 1px solid #666;
+      overflow: hidden;
+    }
+
+    .user-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .user-img-wrapper::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('dtc-watermark.png');
+      background-repeat: repeat;
+      background-size: 150px 75px;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    /* Information Text Styles */
+    .name {
+      font-size: 22px;
+      font-weight: bold;
+      color: #000000;
+      margin-bottom: 12px;
+    }
+
+    .pass-type {
+      font-size: 20px;
+      font-weight: bold;
+      color: #000000;
+      margin-bottom: 12px;
+    }
+
+    .pass-number-container {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      display: block;
+      text-align: center;
+    }
+
+    .pass-label {
+      color: #000000;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .blink-number {
+      color: #3e8e41;
+      display: block;
+      animation: blink 0.8s ease-in-out infinite alternate;
+    }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    .validity {
+      font-size: 20px;
+      font-weight: bold;
+      color: #d9534f;
+      margin-bottom: 15px;
+    }
+
+    /* Bottom Sign & QR Section */
+    .bottom-section {
+      width: 100%;
+      display: flex;
+      border-top: 1px solid #cccccc;
+      background: transparent;
+    }
+
+    .sig-box {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      border-right: 1px solid #cccccc;
+    }
+
+    .sig-img {
+      max-width: 130px;
+      max-height: 80px;
+      width: auto;
+      height: auto;
+      display: block;
+    }
+
+    .qr-box {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .qr-code {
+      width: 85px;
+      height: 85px;
+      display: block;
+    }
+
+    /* Footer Wrapper */
+    .footer-wrapper {
+      width: 100%;
+      height: 28vh;
+      min-height: 180px;
+      background-color: #00a2a6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    /* Screen text style: Copyright  - Delhi e-Governance Society 2026 */
+    .footer {
+      color: #000000;
+      font-size: 14px;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">E- Bus Pass</div>
+
+  <div class="card">
+    <div class="main-title">DTC And Cluster Bus Pass</div>
+    
+    <div class="user-img-wrapper">
+      <img src="my-profile.jpg" alt="Photo">
+    </div>
+
+    <div class="name">Himanshu </div>
+    <div class="pass-type">Student All route AC/Non AC</div>
+    
+    <div class="pass-number-container">
+      <span class="pass-label">Bus Pass No.</span>
+      <span class="blink-number">5232081500642</span>
+    </div>
+    
+    <div class="validity">Valid from 15/08/2026 to 14/11/2026</div>
+
+    <div class="bottom-section">
+      <div class="sig-box">
+        <img src="sig.png" class="sig-img" alt="Signature">
+      </div>
+      <div class="qr-box">
+        <img src="qr.png" class="qr-code" alt="QR Code">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-wrapper">
+    <div class="footer">
+      Copyright &#65533; - Delhi e-Governance Society 2026
+    </div>
+  </div>
+
+</body>
+</html>
